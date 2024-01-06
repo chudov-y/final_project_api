@@ -19,12 +19,12 @@ import static specs.Specs.*;
 
 @Owner("chudov-y")
 @Feature("API test")
-@Story("RequestIn")
 @Tags({@Tag("api")})
 
 public class ReqresApiTests {
 
     @Test
+    @Story("Create new user")
     @DisplayName("Create new user")
     @Description("POST /api/users")
     void createUsersPojoTest() {
@@ -49,6 +49,7 @@ public class ReqresApiTests {
     }
 
     @Test
+    @Story("Registration")
     @DisplayName("Successful registration of new user")
     @Description("POST /api/register")
     void registerSuccessfulLombokTest() {
@@ -73,6 +74,7 @@ public class ReqresApiTests {
     }
 
     @Test
+    @Story("Registration")
     @DisplayName("Unsuccessful registration of new user")
     @Description("POST /api/register")
     void registerUnSuccessfulLombokTest() {
