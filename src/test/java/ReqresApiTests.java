@@ -49,7 +49,7 @@ public class ReqresApiTests {
     }
 
     @Test
-    @Story("Registration")
+    @Story("User registration")
     @DisplayName("Successful registration of new user")
     @Description("POST /api/register")
     void registerSuccessfulLombokTest() {
@@ -74,7 +74,7 @@ public class ReqresApiTests {
     }
 
     @Test
-    @Story("Registration")
+    @Story("User registration")
     @DisplayName("Unsuccessful registration of new user")
     @Description("POST /api/register")
     void registerUnSuccessfulLombokTest() {
@@ -95,6 +95,7 @@ public class ReqresApiTests {
     }
 
     @Test
+    @Story("User authorization")
     @DisplayName("Successful login")
     @Description("POST /api/login")
     void successLoginLombokTest() {
@@ -119,6 +120,7 @@ public class ReqresApiTests {
     }
 
     @Test
+    @Story("User authorization")
     @DisplayName("Unsuccessful login")
     @Description("POST /api/login")
     void unSuccessLoginLombokTest() {
