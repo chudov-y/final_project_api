@@ -65,7 +65,7 @@ gradle clean test
 
 > С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram.
 
-<img title="telegram bot" src="media/screenshots/TelegrammBotAPI.png">
+<img title="telegram bot" src="media/screenshots/TelegrammBotApi.png">
 </p>
 
 <a id="allure"></a>
