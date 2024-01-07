@@ -92,7 +92,7 @@ gradle clean test
 ### Основное окно
 
 <p align="center">
-<img title="Allure TestOps" src="media/screenshots/Dashboard_TO.png">
+<a href="https://allure.autotests.cloud/project/3919/dashboards"><img title="Allure TestOps" src="media/screenshots/DashBoard_TO.png"></a>
 </p>
 
 ### Дерево тестов с разделением по фичам
@@ -105,5 +105,5 @@ gradle clean test
 ## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1025)
 
 <p align="center">
-<img title="Jira" src="media/screenshots/JiraAPI.png">
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1025"><img title="Jira" src="media/screenshots/JiraAPI.png"></a>
 </p>
