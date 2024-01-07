@@ -74,7 +74,7 @@ gradle clean test
 ### Основное окно
 
 <p align="center">
-<img title="Allure Dashboard" src="media/screenshots/AllureDashboard.png">
+<a href="https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/10/allure/"><img title="Allure Dashboard" src="media/screenshots/AllureDashboard.png"></a>
 </p>
 
 ### Отчеты по тестам
@@ -83,7 +83,7 @@ gradle clean test
 
 > В отчете по тестам присутствует развернутая информация по запросам и ответам.
 
-<img title="Allure Tests" src="media/screenshots/AllureWithInfo.png">
+<a href="https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/10/allure/#behaviors"><img title="Allure Tests" src="media/screenshots/AllureWithInfo.png"></a>
 </p>
 
 <a id="allure-testops"></a>
@@ -105,5 +105,5 @@ gradle clean test
 ## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1025)
 
 <p align="center">
-<a href="https://jira.autotests.cloud/browse/HOMEWORK-1025"><img title="Jira" src="media/screenshots/JiraAPI.png"></a>
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1025"><img title="Jira" src="media/screenshots/JiraApi.png"></a>
 </p>
