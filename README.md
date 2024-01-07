@@ -32,10 +32,9 @@
 <a id="cases"></a>
 ## :heavy_check_mark: Реализованные проверки
 
--  Успешная/неуспешная авторизация пользователя
+-  Создание нового пользователя
 -  Успешная/неуспешная регистрация пользователя
--  Получение данных пользователя по id
--  Удаление пользователя по id
+-  Успешная/неуспешная авторизация пользователя
 
 <a id="console"></a>
 ##  Запуск тестов из терминала
@@ -46,17 +45,17 @@ gradle clean test
 ```
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/AD_demo_api_reqres/)
+## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/)
 
 <p align="center">
 
-> Для запуска необходимо нажать "Собрать сейчас".
+> Для запуска сборки необходимо перейти в раздел "Build with Parameters" и нажать кнопку "Build".
 
-<a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/JenkinsSborka.png" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/"><img src="media/screenshots/Jenkins.png" alt="Jenkins"/></a>
 
 > При клике на сборку после завершения можно увидеть артефакты запуска и полезные ссылки для более детального изучения прогона.
 
-<a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/JenkinsIntegrations.png" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/10/"><img src="media/screenshots/JenkinsIntegration.png" alt="Jenkins"/></a>
 </p>
 
 <a id="telegram"></a>
@@ -66,11 +65,11 @@ gradle clean test
 
 > С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram.
 
-<img title="telegram bot" src="media/screenshots/TelegramBotAPI.png">
+<img title="telegram bot" src="media/screenshots/TelegrammBotAPI.png">
 </p>
 
 <a id="allure"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/AD_demo_api_reqres/5/allure/) отчеты
+## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/10/allure/) отчеты
 
 ### Основное окно
 
@@ -88,7 +87,7 @@ gradle clean test
 </p>
 
 <a id="allure-testops"></a>
-## <img src="media/logo/Allure_TO.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1933/dashboards)
+## <img src="media/logo/Allure_TO.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3919/dashboards)
 
 ### Основное окно
 
@@ -103,7 +102,7 @@ gradle clean test
 </p>
 
 <a id="jira"></a>
-## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-553)
+## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1025)
 
 <p align="center">
 <img title="Jira" src="media/screenshots/JiraAPI.png">
