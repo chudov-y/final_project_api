@@ -38,7 +38,8 @@ public class ReqresApiTests {
                         .when()
                         .post("/users")
                         .then()
-                        .spec(createUserResponseSpec)
+                        .spec(responseSpec)
+                        .statusCode(201)
                         .extract().as(CreateUserResponse.class));
 
         step("Verify response", () -> {
@@ -63,7 +64,8 @@ public class ReqresApiTests {
                         .when()
                         .post("/register")
                         .then()
-                        .spec(registerSuccessResponseSpec)
+                        .spec(responseSpec)
+                        .statusCode(200)
                         .extract().as(RegisterUserResponse.class));
 
         step("Verify response", () -> {
@@ -87,7 +89,8 @@ public class ReqresApiTests {
                         .when()
                         .post("/register")
                         .then()
-                        .spec(missingPasswordResponseSpec)
+                        .spec(responseSpec)
+                        .statusCode(400)
                         .extract().as(RegisterUserResponse.class));
 
         step("Verify response", () ->
@@ -111,7 +114,8 @@ public class ReqresApiTests {
                 .when()
                 .post("/login")
                 .then()
-                .spec(registerSuccessResponseSpec)
+                .spec(responseSpec)
+                        .statusCode(200)
                 .extract().as(RegisterUserResponse.class));
 
         step("Verify response", () ->
@@ -135,7 +139,8 @@ public class ReqresApiTests {
                         .when()
                         .post("/login")
                         .then()
-                        .spec(missingPasswordResponseSpec)
+                        .spec(responseSpec)
+                        .statusCode(400)
                         .extract().as(RegisterUserResponse.class));
 
         step("Verify response", () ->
