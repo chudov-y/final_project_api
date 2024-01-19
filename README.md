@@ -69,7 +69,7 @@ gradle clean test
 </p>
 
 <a id="allure"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/10/allure/) отчеты
+## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/22_Bubalov_FinalProject_Api/allure/) отчеты
 
 ### Основное окно
 
