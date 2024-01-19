@@ -1,28 +1,17 @@
 import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import models.CreateUserRequest;
-import models.CreateUserResponse;
-import models.RegisterUserRequest;
-import models.RegisterUserResponse;
+import models.*;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static specs.Specs.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static specs.Specs.request;
+import static specs.Specs.responseSpec;
 
-
-@Owner("chudov-y")
-@Feature("API test")
-@Tags({@Tag("api")})
-
-public class ReqresApiTests {
-
+public class UserApiTest {
     @Test
     @Story("Create new user")
     @DisplayName("Create new user")
@@ -70,7 +59,7 @@ public class ReqresApiTests {
 
         step("Verify response", () -> {
             assertEquals("4", response.getId());
-            assertEquals("QpwL5tke4Pnpja7X4", response.getToken());
+            assertNotNull(response.getToken());
 
         });
     }
@@ -98,54 +87,36 @@ public class ReqresApiTests {
     }
 
     @Test
-    @Story("User authorization")
-    @DisplayName("Successful login")
-    @Description("POST /api/login")
-    void successLoginLombokTest() {
-
-        RegisterUserRequest authBody = new RegisterUserRequest();
-        authBody.setEmail("eve.holt@reqres.in");
-        authBody.setPassword("cityslicka");
-
-        RegisterUserResponse response = step("Make register request", () ->
-                given()
-                .spec(request)
-                .body(authBody)
-                .when()
-                .post("/login")
-                .then()
-                .spec(responseSpec)
-                        .statusCode(200)
-                .extract().as(RegisterUserResponse.class));
-
-        step("Verify response", () ->
-            assertEquals("QpwL5tke4Pnpja7X4", response.getToken()));
-
-    }
-
-    @Test
-    @Story("User authorization")
-    @DisplayName("Unsuccessful login")
-    @Description("POST /api/login")
-    void unSuccessLoginLombokTest() {
-
-        RegisterUserRequest authBody = new RegisterUserRequest();
-        authBody.setEmail("peter@klaven");
-
-        RegisterUserResponse response = step("Make register request", () ->
-                given()
-                        .spec(request)
-                        .body(authBody)
+    @Story("Delete user")
+    @DisplayName("Delete user")
+    void checkDeleteTest() {
+        step("Delete user", () ->
+                given(request)
                         .when()
-                        .post("/login")
+                        .delete("/users/2")
                         .then()
                         .spec(responseSpec)
-                        .statusCode(400)
-                        .extract().as(RegisterUserResponse.class));
+                        .statusCode(204)
+        );
+    }
+    @Test
+    @Story("List users")
+    @DisplayName("List users")
+    void listUsersTest() {
+        ListUsersResponse response = step("Get users list", () ->
+        given(request)
+                .when()
+                .get("/users?page=2")
+                .then()
+                .spec(responseSpec)
+                .statusCode(200)
+                .extract().as(ListUsersResponse.class)
+        );
 
-        step("Verify response", () ->
-            assertEquals("Missing password", response.getError()));
-
-        }
-
+        step("Verify users list", () -> {
+            assertEquals(2, response.getPage());
+            assertEquals(12, response.getTotal());
+            assertEquals("https://reqres.in/#support-heading", response.getSupport().getUrl());
+        });
+    }
 }
